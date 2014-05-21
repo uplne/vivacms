@@ -1,5 +1,5 @@
-var frontend = require('./frontend');
+var frontend = require('./admin');
 
 module.exports = {
-    frontend: frontend
+    admin: admin
 };

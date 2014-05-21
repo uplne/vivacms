@@ -176,11 +176,11 @@ module.exports = function(grunt) {
         */
         nodemon: {
             dev: {
-                script: 'viva-dev.js',
+                script: 'vivacms-dev.js',
                 options: {
                     nodeArgs: ['--debug'],
                     env: {
-                        PORT: '1985'
+                        PORT: '1986'
                     },
                     // omit this property if you aren't serving HTML files and
                     // don't want to open a browser tab on start
@@ -197,9 +197,9 @@ module.exports = function(grunt) {
                             }, 1000);
                         });
 
-                        /*setTimeout(function() {
-                            require('grunt-open')('http://localhost:1955');
-                        }, 1000);*/
+                        setTimeout(function() {
+                            require('grunt-open')('http://localhost:1986');
+                        }, 1500);
                     }
                 }
             }
@@ -207,7 +207,7 @@ module.exports = function(grunt) {
 
         open: {
             dev: {
-              path: 'http://localhost:1985',
+              path: 'http://localhost:1986',
               app: 'Google Chrome'
             }
         },

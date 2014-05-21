@@ -20,14 +20,14 @@ function setupServer() {
         // Configure server
         app.use(bodyParser());
         app.use(methodOverride());
+        app.use(express.cookieParser());
+        app.use(express.session({secret: '1234567890123'}));
         app.use(favicon(config.paths.images + '/favicon.ico'));
         app.use(express.static(path.join(appRoot, 'static')));
         app.use('/static/images', express.static(config.paths.images));
         app.use('/static/js', express.static(config.paths.js));
         app.use('/static/css', express.static(config.paths.css));
 
-        // Route to PDFs and other documents
-        app.use('/static/pdf', express.static(config.paths.pdf));
         app.use(errorHandler({
             dumpExceptions: true,
             showStack: true
@@ -49,7 +49,7 @@ function setupServer() {
         console.log('Express server listening on port %d in %s mode', config.server.port, app.settings.env);
     });
 
-    routes.frontend(app);
+    routes.admin(app);
 }
 
 module.exports = init;
