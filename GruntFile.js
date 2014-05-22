@@ -212,7 +212,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // In order to run the Karma watcher and the SASS watchers concurrently, we need to run this task
         concurrent: {
             dev: {
                 tasks: ['watch', 'nodemon'],
