@@ -26,7 +26,7 @@ function setupServer() {
     app.use(bodyParser());
     app.use(methodOverride());
     app.use(cookieParser());
-    app.use(session({secret: 'cmssecret' }));
+    app.use(session({secret: 'cmssecret'}));
     app.use(favicon(config.paths.images + '/favicon.ico'));
     app.use(express.static(path.join(appRoot, 'public')));
     app.use('/public/images', express.static(config.paths.images));

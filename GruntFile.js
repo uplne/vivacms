@@ -178,7 +178,7 @@ module.exports = function(grunt) {
         */
         nodemon: {
             dev: {
-                script: 'viva-dev.js',
+                script: 'vivacms-dev.js',
                 options: {
                     nodeArgs: ['--debug'],
                     env: {
