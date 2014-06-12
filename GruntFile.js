@@ -25,11 +25,12 @@ module.exports = function(grunt) {
         '*/\n',
 
         dir: {
-            js: 'static/js',
-            css: 'static/css',
-            sass: 'static/sass',
-            img: 'static/images',
-            views: 'static/views',
+            js: 'public/js',
+            css: 'public/css',
+            sass: 'dev/sass',
+            img: 'public/images',
+            views: 'public/views',
+            server: 'server',
             testsclient: 'tests/client'
         },
 
@@ -58,7 +59,7 @@ module.exports = function(grunt) {
         */
         jshint: {
             all: [
-                '<%= dir.js %>/server/*.js',
+                '<%= dir.server %>/*.js',
                 'Grunfile.js'
             ],
             options: {
@@ -162,6 +163,7 @@ module.exports = function(grunt) {
                 files: [
                     '<%= dir.img %>/*.{png,jpg,gif,svg}',
                     '<%= dir.js %>/**/*.js',
+                    '<%= dir.server %>/**/*.js',
                     '<%= dir.views %>/**/*.hbs'
                 ],
                 options: {
@@ -180,7 +182,7 @@ module.exports = function(grunt) {
                 options: {
                     nodeArgs: ['--debug'],
                     env: {
-                        PORT: '1985'
+                        PORT: '2012'
                     },
                     // omit this property if you aren't serving HTML files and
                     // don't want to open a browser tab on start
@@ -207,7 +209,7 @@ module.exports = function(grunt) {
 
         open: {
             dev: {
-              path: 'http://localhost:1985',
+              path: 'http://localhost:2012',
               app: 'Google Chrome'
             }
         },
