@@ -1,0 +1,69 @@
+/**
+ * Fonts
+ */
+
+$base-font-family: 'Times';
+
+/**
+ * Font icons
+ */
+@font-face {
+    font-family: 'icons';
+    src:url('/static/fonts/icons.eot?-vctiso');
+    src:url('/static/fonts/icons.eot?#iefix-vctiso') format('embedded-opentype'),
+        url('/static/fonts/icons.woff?-vctiso') format('woff'),
+        url('/static/fonts/icons.ttf?-vctiso') format('truetype'),
+        url('/static/fonts/icons.svg?-vctiso#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="fonticon--"], [class*=" fonticon--"] {
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fonticon--date28:before {
+    content: "\e601";
+}
+
+.fonticon--date27:before {
+    content: "\e602";
+}
+
+.fonticon--date26:before {
+    content: "\e603";
+}
+
+.fonticon--date25:before {
+    content: "\e604";
+}
+
+.fonticon--date24:before {
+    content: "\e605";
+}
+
+.fonticon--date22:before {
+    content: "\e606";
+}
+
+.fonticon--date21:before {
+    content: "\e600";
+}
+
+.fonticon--yt:before {
+    content: "\e607";
+}
+
+.fonticon--fb:before {
+    content: "\e608";
+}

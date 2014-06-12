@@ -1,0 +1,26 @@
+<div class="main__container">
+    <div class="main__sidebar">
+        {{>sidebar}}
+        {{>sidebarpartners}}
+    </div>
+
+    <div class="press g-fourfifths">
+        <div class="press__top">
+            <div class="g__item g-half box">
+                <h2 class="press__heading">Press galéria</h2>
+                <p>Fotografie v tlačovej kvalite sú prístupné len pre médiá. V prípade otázok píšte na <a href="mailto:barbora@vivamusica.sk" title="barbora@vivamusica.sk">barbora@vivamusica.sk</a></p>
+                <a class="btn--contrast" href="/presslogin">Press galéria na stiahnutie</a>
+            </div>
+        </div>
+        <div class="box">
+            <h2 class="press__heading">Tlačové správy</h2>
+            {{#foreach press}}
+            <a class="press__link g-full" href="/press/{{path}}">
+                <span class="press__date">{{date}}</span>
+                <p class="press__intro">{{title}}</p>
+                <span class="press__more" href="/press/{{path}}">Viac ></span>
+            </a>
+            {{/foreach}}
+        </div>
+    </div>
+</div>

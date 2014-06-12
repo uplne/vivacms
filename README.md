@@ -1,4 +1,4 @@
-vivacms
-=======
+vivamusica2014
+==============
 
-Node.js CMS
+Vivamusica! festival

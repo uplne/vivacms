@@ -1,0 +1,13 @@
+<a href="#nogo-menu" class="btn--nav" data-module="tooglemenu"><i class="icon--nav"></i></a>
+<div class="main__menu">
+    <div class="box">
+        <a class="btn--brand" href="" title="Vivamusica! festival"><img src="/static/images/assets/viva-logo-medium.png" width="142" height="99" alt="   Vivamusica! festival" /></a>
+        <ul class="sbnav">
+            {{#each clientnav}}
+                <li>
+                    <a class="sbnav__link{{#if selected}} is-active{{/if}}" href="{{path}}" title="{{name}}">{{name}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

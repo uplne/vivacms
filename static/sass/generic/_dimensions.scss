@@ -1,0 +1,66 @@
+/**
+ * DIMENSIONS
+ *
+ * rwd DESIGN
+ * FONTS
+ * PADDINGS/MARGINS
+ * DIMENSIONS
+ */
+
+/**
+ * rwd DESIGN
+ *
+ * Dimensions for rwd design.
+ */
+$base-w: 1000px;
+$tablet-w: 960px;
+$mobile-portrait-w: 320px;
+$mobile-landscape-w: 480px;
+
+/**
+ * HEADINGS
+ */
+$h1-size: 26px;
+$h2-size: 22px;
+
+/**
+ * FONTS
+ */
+$base-font-size: 14px;
+$base-line-height: 24px;
+
+/**
+ * PADDINGS/MARGINS
+ */
+$base-padding: 1em;
+$base-padding-small: .5em;
+$base-mb: 1em;
+
+/**
+ * SIDEBAR
+ */
+$sidebar-w: 14em;
+$sidebar-logo-hp-fix: 4px;
+$navlink-size: 4em;
+
+/**
+ * POP
+ */
+$pop-border-size: .5em;
+
+/**
+ * Display: inline-block 2px margin fix
+ */
+$display-fix: -2px;
+
+/**
+ * DIMENSTIONS
+ */
+
+/**
+ * Main layout
+ */
+$main-w: 954px;
+
+$main-container-w: 70%;
+$contentbar-w: 100% - $main-container-w;

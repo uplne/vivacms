@@ -1,0 +1,110 @@
+/**
+ * BUTTON COMPONENTS
+ */
+
+/**
+ * Default button type across the page
+ */
+.btn {
+    @extend %btn;
+    @extend %effect-trans;
+    @include font-size(16px);
+
+    margin: 1em auto .7em auto;
+    padding: 0 2em;
+    border: 1px solid $brand-text;
+    color: $brand-text;
+    font-style: italic;
+    line-height: 2.5;
+
+    &:hover {
+        background-color: $brand-beta;
+    }
+}
+
+/**
+ * Mobile nav button
+ */
+.btn--nav {
+    @extend %btn;
+    @extend %effect-trans;
+    @include font-size(11px);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: $navlink-size;
+    height: $navlink-size;
+    padding: 1em;
+    z-index: $zindex-omega;
+    background-color: $sidebar-bg;
+
+    // When mobile menu is active move
+    &.is-active {
+        left: $sidebar-w + $navlink-size - .2;
+
+        // When mobile menu is active we need to transform icon into X shape
+        .icon--nav {
+            background-color: transparent;
+
+            &:before {
+                @include vendor(transform, rotate(45deg));
+            }
+
+            &:after {
+                @include vendor(transform, rotate(-45deg) translate(.45em, -.45em));
+            }
+        }
+    }
+
+    // When on larger screen disable this button
+    @include rwd($tablet-w, false) {
+        display: none;
+    }
+}
+
+/**
+ * Popup close button
+ */
+.btn--close {
+    @extend %btn;
+    @extend %effect-trans;
+    @include font-size(11px);
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $navlink-size;
+    height: $navlink-size;
+    padding: 1em;
+    background-color: $sidebar-bg;
+
+    &:hover {
+        background-color: $brand-btn-hover;
+    }
+}
+
+/**
+ * MAIN LOGO
+ */
+.btn--brand {
+    @extend %btn;
+
+    float: right;
+    margin-bottom: $base-mb * 2;
+}
+
+/**
+ * Button buy tickets with background
+ */
+.btn--contrast {
+    @extend .btn;
+
+    margin: 0;
+    color: $brand-gamma;
+    background-color: $brand;
+
+    &:hover {
+        background-color: $brand-beta;
+    }
+}

@@ -1,0 +1,39 @@
+/**
+ * BOX OBJECTS
+ */
+
+$box-media-bottom-p: 5px;
+
+.box,
+%box {
+    @extend %inline-block;
+}
+
+.box {
+    padding: $base-padding;
+}
+
+/**
+ * Special effects for image in box (media)
+ */
+.box__m {
+    @extend %effect-scale;
+
+    width: 100%;
+    height: auto;
+
+    &:hover {
+        @extend %effect-descale;
+    }
+}
+
+.box__m--static {
+    border-bottom: $box-media-bottom-p solid $brand;
+}
+
+/**
+ * Special settings for content in box
+ */
+.box__content {
+    padding: $base-padding-small;
+}

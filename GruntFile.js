@@ -46,7 +46,7 @@ module.exports = function(grunt) {
             files: [{
               expand: true, // Enable dynamic expansion.
               cwd: '<%= dir.img %>/', // Src matches are relative to this path.
-              src: '{,*/}*.{png,jpg,jpeg}', // Actual pattern(s) to match.
+              src: '{,*/**/}*.{png,jpg,jpeg}', // Actual pattern(s) to match.
               dest: '<%= dir.img %>/' // Destination path prefix.
             }]
           }
@@ -176,11 +176,11 @@ module.exports = function(grunt) {
         */
         nodemon: {
             dev: {
-                script: 'vivacms-dev.js',
+                script: 'viva-dev.js',
                 options: {
                     nodeArgs: ['--debug'],
                     env: {
-                        PORT: '1986'
+                        PORT: '1985'
                     },
                     // omit this property if you aren't serving HTML files and
                     // don't want to open a browser tab on start
@@ -197,9 +197,9 @@ module.exports = function(grunt) {
                             }, 1000);
                         });
 
-                        setTimeout(function() {
-                            require('grunt-open')('http://localhost:1986');
-                        }, 1500);
+                        /*setTimeout(function() {
+                            require('grunt-open')('http://localhost:1955');
+                        }, 1000);*/
                     }
                 }
             }
@@ -207,11 +207,12 @@ module.exports = function(grunt) {
 
         open: {
             dev: {
-              path: 'http://localhost:1986',
+              path: 'http://localhost:1985',
               app: 'Google Chrome'
             }
         },
 
+        // In order to run the Karma watcher and the SASS watchers concurrently, we need to run this task
         concurrent: {
             dev: {
                 tasks: ['watch', 'nodemon'],

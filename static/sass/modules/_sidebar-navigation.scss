@@ -1,0 +1,37 @@
+/**
+ * SIDEBAR NAVIGATION
+ */
+.sbnav {
+    @extend %uilist;
+
+    float: right;
+    width: 70%;
+}
+
+/**
+ * Menu link in left sidebar
+ *
+ * 1. We need to compensate for logo 4px gap on the right side.
+ */
+.sbnav__link {
+    @extend %btn;
+    @extend %effect-trans;
+    @include font-size(16px, false);
+
+    display: block;
+    padding-right: $sidebar-logo-hp-fix; /* [1] */
+    text-align: right;
+    line-height: 1.6em;
+    font-style: italic;
+    color: $sidebar-links;
+
+    &:hover,
+    &.is-active {
+
+        // To create the effect that hover state is starting from the edge.
+        margin-right: toEM((1 / 16) * -$base-font-size);
+        padding-right: $base-padding;
+        background-color: $sidebar-menu-hover-bg;
+        color: $sidebar-menu-hover-color;
+    }
+}

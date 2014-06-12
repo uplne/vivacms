@@ -1,0 +1,55 @@
+/**
+ * Arrows
+ *
+ * Extending: objects/_buttons
+ */
+%arrow {
+    @extend %btn;
+    @extend %effect-trans;
+    @include font-size(12px, false);
+
+    position: absolute;
+    z-index: $zindex-alpha;
+    width: 7.5em;
+    padding: 1em 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,.6);
+    color: $brand-gamma;
+    text-align: center;
+
+    // TODO - arrow animation
+    &:hover {
+        background-color: rgb(32,32,32);
+        background-color: rgba(0,0,0,1);
+    }
+}
+
+.arrow--left {
+    @extend %arrow;
+
+    bottom: 0;
+    left: 0;
+
+    &:before {
+        @include font-size(18px, false);
+        content: "<";
+        position: absolute;
+        top: .3em;
+        left: .5em;
+    }
+}
+
+.arrow--right {
+    @extend %arrow;
+
+    bottom: 0;
+    right: 0;
+
+    &:after {
+        @include font-size(18px, false);
+        content: ">";
+        position: absolute;
+        top: .3em;
+        right: .5em;
+    }
+}

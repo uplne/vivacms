@@ -1,0 +1,40 @@
+/**
+ * Base styles
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font: #{($base-font-size / 16px) * 1em}/#{$base-line-height / $base-font-size} $base-font-family;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: $brand-bg url('/static/images/assets/main-bg.jpg') top center repeat-y;
+}
+
+a {
+    text-decoration: none;
+    color: $brand-link;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/**
+ * Google iFrame height issue fix
+ */
+iframe[name='google_conversion_frame'] {
+    height: 0 !important;
+    width: 0 !important;
+    line-height: 0 !important;
+    font-size: 0 !important;
+    margin-top: -13px;
+    float: left;
+}

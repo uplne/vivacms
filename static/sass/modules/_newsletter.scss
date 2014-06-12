@@ -1,0 +1,68 @@
+/**
+ * Newsletter module
+ */
+.newsletter {
+    display: none;
+
+    @include rwd($tablet-w) {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.newsletter__label {
+    @include font-size(16px, false);
+
+    line-height: 1.9;
+    font-style: italic;
+    color: $brand-text;
+    padding: 0 1em;
+}
+
+.newsletter__wrap {
+    height: 1.5em;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: .35em;
+    background-color: $brand-gamma;
+    border-radius: .1em;
+    line-height: 1;
+}
+
+/**
+ * 1. magic numbers are solving FF issue with line height
+ *    on input fields and button.
+ *
+ *    FF is forcing line-height: normal !important;
+ */
+.newsletter__input {
+    width: 15em;
+    height: 1.5em;
+    padding: .21em .4em; /* [1] */
+    font-style: italic;
+    border: none;
+    vertical-align: top;
+    color: rgba(0,0,0,.5);
+}
+
+/**
+ * 1. 19px / 12px this is fixing the rounding bug causing 1px difference
+ *    between Chrome and FF
+ */
+.newsletter__button {
+    @extend %btn;
+    @extend %effect-trans;
+    @include font-size(12px, false);
+
+    margin: 1px 1px 0 0;
+    padding: .2em 1em;
+    text-transform: uppercase;
+    border: none;
+    color: $brand-text;
+    background-color: $brand;
+    //line-height: 1.58333333; /* [1] */
+
+    &:hover {
+        background-color: $icon-nav;
+    }
+}

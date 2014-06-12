@@ -1,13 +1,17 @@
 {
-  "name": "nodejs-simple-website",
-  "version": "1.0.0",
-  "description": "Setup for creating simple nodejs static website",
+  "name": "vivamusica",
+  "version": "0.0.2",
+  "description": "Vivamusica! festival website",
+  "homepage": "http://www.vivamusica.sk",
   "main": "GruntFile.js",
   "author": {
     "name": "Steve Vadocz",
     "url": "http://blog.steveis.guru"
   },
   "private": true,
+  "scripts": {
+    "start": "node index"
+  },
   "engine": "node >= 0.8.8",
   "dependencies": {
     "express": ">= 4.0.0",
@@ -17,6 +21,7 @@
     "errorhandler": "~1.0.0",
     "express-hbs": ">= 0.7.6",
     "path": "~0.4.9",
+    "mongoose": "~3.8.8",
     "async": "~0.6.2",
     "cookie-parser": "~1.1.0",
     "express-session": "~1.2.0"

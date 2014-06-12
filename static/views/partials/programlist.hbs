@@ -1,0 +1,13 @@
+<div class="thumbnaillist">
+    <ul class="thumbnaillist__list">
+        {{#foreach program}}
+        <li class="thumbnaillist__item">
+            <a href="/program/{{path}}" class="thumbnaillist__link">
+                <img src="/static/images/program/{{img}}" width="190" height="190" alt="" />
+                <i class="programlist__icon fonticon--date{{datenum}}"></i>
+                <p class="thumbnaillist__title">{{#if ../lang}}{{title_en}}{{else}}{{title}}{{/if}}</p>
+            </a>
+        </li>
+        {{/foreach}}
+    </ul>
+</div>

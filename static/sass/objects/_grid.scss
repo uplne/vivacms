@@ -1,0 +1,57 @@
+/**
+ * Grid system
+ *
+ * On Vivamusica website we have five block grid.
+ */
+
+.g {
+    display: inline-block;
+    margin-left: -$base-padding;
+}
+
+.g__item {
+    @include vendor(box-sizing, border-box);
+
+    float: left;
+    width: 100%;
+    padding-left: $base-padding;
+}
+
+.g__item--full {
+    @extend .g__item;
+
+    padding-left: 0;
+}
+
+.g-half { width: 50%; }
+
+/**
+* Thirds
+*/
+.g-one-third { width:33.333%; }
+.g-two-thirds { width:66.666%; }
+
+/**
+ * Quarters
+ */
+.g-quarter { width: 25%; }
+
+/**
+ * Fifths
+ */
+.g-fifth      { width: 20%; }
+.g-twofifths  { width: 40%; }
+.g-threefifts { width: 60%; }
+.g-fourfifths { width: 80%; }
+
+/**
+ * Mobile
+ *
+ * Make width 100% for less than mobile width
+ */
+.g-mobile-full {
+    @include rwd(false, $mobile-landscape-w) {
+        width: 100%;
+        padding-left: 0;
+    }
+}

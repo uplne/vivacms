@@ -1,0 +1,56 @@
+/**
+ * Helpers
+ */
+
+.is-hidden {
+    display: none;
+}
+
+.visuallyhidden {
+    visibility: hidden;
+}
+
+%center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+%inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/**
+ * To hide on small screen
+ */
+.hidesmallscreen {
+    @include rwd($tablet-w) {
+        display: none;
+    }
+}
+
+/**
+ * Pulls
+ */
+.pull--top    { margin-top   : -$base-padding; }
+.pull--right  { margin-right : -$base-padding; }
+.pull--bottom { margin-bottom: -$base-padding; }
+.pull--left   { margin-left  : -$base-padding; }
+
+/**
+ * Pushes
+ */
+.push--left { margin-left: $base-padding; }
+
+/**
+ * Remove margin
+ */
+.nullm--top    { margin-top:    0; }
+.nullm--right  { margin-right:  0; }
+.nullm--bottom { margin-bottom: 0; }
+.nullm--left   { margin-left:   0; }
+
+.nullp--top    { padding-top:    0; }
+.nullp--right  { padding-right:  0; }
+.nullp--bottom { padding-bottom: 0; }
+.nullp--left   { padding-left:   0; }

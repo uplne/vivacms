@@ -1,0 +1,14 @@
+/**
+ * Main content layout
+ */
+
+.contentbox {
+    width: 100%;
+    float: left;
+    margin: $base-padding 0;
+
+    @include rwd($tablet-w) {
+        width: $fourfifths;
+        padding: 0 $base-padding;
+    }
+}

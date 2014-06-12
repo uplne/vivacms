@@ -1,0 +1,28 @@
+/**
+ * Media island
+ *
+    <div class="mediaisland">
+        <img src="" width="" height="" alt="" />
+        <p class="box"></p>
+    </div>
+ */
+
+%mediaisland {
+    @extend %inline-block;
+
+    > img {
+        float: left;
+    }
+
+    .mediaisland__content {
+        float: left;
+    }
+}
+
+.mediaisland--small {
+    @extend %mediaisland;
+
+    > img {
+        height: 45px;
+    }
+}

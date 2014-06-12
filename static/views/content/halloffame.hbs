@@ -1,0 +1,20 @@
+<div class="main__container">
+    <div class="main__sidebar">
+        {{>sidebar}}
+        {{>sidebarpartners}}
+    </div>
+
+    <div class="thumbnaillist">
+        <ul class="thumbnaillist__list">
+            {{#foreach halloffame}}
+            <li class="thumbnaillist__item">
+                <div class="thumbnaillist__box">
+                    <img src="{{img}}" width="190" alt="" />
+                    <p class="thumbnaillist__date--small">{{title1}} <span>{{title2}}</span></p>
+                    <p class="thumbnaillist__title">{{year}}</p>
+                </div>
+            </li>
+            {{/foreach}}
+        </ul>
+    </div>
+</div>

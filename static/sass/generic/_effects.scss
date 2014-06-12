@@ -1,0 +1,39 @@
+/**
+ * EFFECTS
+ *
+ * TRANSITIONS
+ */
+
+$properties: 'top, right, left, bottom, margin, background';
+
+/**
+ * TRANSITIONS
+ */
+%effect-trans {
+    transition-property: #{$properties};
+    transition-duration: .25s;
+    transition-timing-function: ease-out;
+}
+
+%effect-trans--slow {
+    transition-property: #{$properties};
+    transition-duration: 1.6s;
+    transition-timing-function: ease-out;
+}
+
+%effect-trans--delay {
+    transition-property: #{$properties};
+    transition-duration: .25s;
+    transition-timing-function: ease-out;
+    transition-delay: 30ms;
+}
+
+%effect-scale {
+    transform: scale(1);
+    transition: 0.25s ease-out;
+}
+
+%effect-descale {
+    transform: scale(1.5);
+    transition: 10s ease-out;
+}
