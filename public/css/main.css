@@ -722,7 +722,7 @@ h2, .beta {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/generic\/_helpers\.scss}line{font-family:\0000318}}
-.box, .mediaisland--small {
+.box, .mediaisland--small, .top__logo {
   display: inline-block;
   vertical-align: top;
 }
@@ -1082,7 +1082,7 @@ h2, .beta {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_top\.scss}line{font-family:\000031}}
 .top {
   width: 100%;
-  height: 3em;
+  height: 5em;
   background-color: black;
   position: fixed;
   top: 0;

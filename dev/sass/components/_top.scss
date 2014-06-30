@@ -1,8 +1,12 @@
 .top {
     width: 100%;
-    height: 3em;
+    height: 5em;
     background-color: $brand-beta;
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.top__logo {
+    @extend %inline-block;
 }
