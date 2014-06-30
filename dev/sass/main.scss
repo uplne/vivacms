@@ -38,6 +38,7 @@
 @import "generic/clearfix";
 @import "generic/effects";
 @import "generic/headings";
+@import "generic/helpers";
 
 /**
  * Objects
@@ -52,41 +53,4 @@
 /**
  * Components
  */
-@import "components/buttons";
-@import "components/icons";
-@import "components/title";
-@import "components/contentbar";
-@import "components/arrows";
-@import "components/mediaisland";
-@import "components/headings";
-@import "components/form";
-
-/**
- * Modules
- */
-@import "modules/article";
-@import "modules/thumbnaillist";
-@import "modules/sidebar-navigation";
-@import "modules/sidebar-partners";
-@import "modules/social-navigation";
-@import "modules/tickets";
-@import "modules/contentbox";
-@import "modules/gallery";
-@import "modules/banner";
-@import "modules/carousel";
-@import "modules/programlist";
-@import "modules/footer";
-@import "modules/newsletter";
-@import "modules/notification";
-
-/**
- * Pages
- */
-@import "pages/main";
-@import "pages/press";
-@import "pages/partners";
-
-/**
- * Generic files with higher specificity
- */
-@import "generic/helpers";
+@import "components/top";

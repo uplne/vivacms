@@ -1,4 +1,5 @@
 var exphbs  = require('express-hbs'),
+    config  = require('./config'),
     helpers = {},
     api     = {},
     utils   = {};
@@ -15,13 +16,13 @@ helpers = {
     },
 
     imageAssets: function (context, options) {
-        var output = '/static/images' + context;
+        var output = config.paths.images + context;
 
         return new exphbs.SafeString(output);
     },
 
     cssAssets: function (context, options) {
-        var output = '/static/css' + context;
+        var output = config.paths.css + context;
 
         return new exphbs.SafeString(output);
     }

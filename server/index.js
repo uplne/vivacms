@@ -1,18 +1,18 @@
-var express      = require('express'),
-    bodyParser   = require('body-parser'),
+var express        = require('express'),
+    bodyParser     = require('body-parser'),
     methodOverride = require('method-override'),
-    favicon      = require('static-favicon'),
-    errorHandler = require('errorhandler'),
-    exphbs       = require('express-hbs'),
-    path         = require('path'),
-    config       = require('./config'),
-    routes       = require('./routes'),
-    helpers      = require('./helpers'),
-    db           = require('./config/db'),
-    dbmodels     = require('./controllers/dbmodels'),
-    appRoot      = config.paths.appRoot,
-    cookieParser = require('cookie-parser'),
-    session      = require('express-session');
+    favicon        = require('static-favicon'),
+    errorHandler   = require('errorhandler'),
+    exphbs         = require('express-hbs'),
+    path           = require('path'),
+    config         = require('./config'),
+    routes         = require('./routes'),
+    helpers        = require('./helpers'),
+    db             = require('./config/db'),
+    dbmodels       = require('./controllers/dbmodels'),
+    appRoot        = config.paths.appRoot,
+    cookieParser   = require('cookie-parser'),
+    session        = require('express-session');
 
 function init() {
     app = express();
@@ -32,7 +32,6 @@ function setupServer() {
     app.use('/public/images', express.static(config.paths.images));
     app.use('/public/js', express.static(config.paths.js));
     app.use('/public/css', express.static(config.paths.css));
-
     app.use(errorHandler({
         dumpExceptions: true,
         showStack: true
@@ -40,11 +39,11 @@ function setupServer() {
 
     // Template engine
     app.engine('hbs', exphbs.express3({
-        partialsDir: appRoot + '/public/views/partials',
-        defaultLayout: appRoot + '/public/views/layouts/default.hbs'
+        partialsDir: appRoot + '/server/views/partials',
+        defaultLayout: appRoot + '/server/views/layouts/default.hbs'
     }));
     app.set('view engine', 'hbs');
-    app.set('views', appRoot + '/public/views');
+    app.set('views', appRoot + '/server/views');
 
     helpers.registerHelpers();
 
@@ -57,7 +56,7 @@ function setupServer() {
     db.connect();
 
     // Normal routes
-    routes.frontend(app);
+    routes.admin(app);
 
     // Routes behing auth
     routes.secure(app);

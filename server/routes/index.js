@@ -1,7 +1,7 @@
-var frontend = require('./frontend'),
-    secure   = require('./secure');
+var admin  = require('./admin'),
+    secure = require('./secure');
 
 module.exports = {
-    frontend: frontend,
+    admin: admin,
     secure: secure
 };

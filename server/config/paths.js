@@ -9,7 +9,7 @@ function getPaths() {
         'server' : path.join(appRoot, 'server'),
         'images' : path.join(appRoot, 'public/images'),
         'js'     : path.join(appRoot, 'public/js'),
-        'css'    : path.join(appRoot, 'public/css')
+        'css'    : 'public/css'
     };
 }
 

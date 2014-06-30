@@ -76,7 +76,7 @@ module.exports = function(grunt) {
             },
 
             unit: {
-                src: ["tests/unit/**/*.js"]
+                src: ["tests/server/**/*.js"]
             }
         },
 
