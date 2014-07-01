@@ -1,0 +1,37 @@
+/**
+ * BUTTON COMPONENTS
+ */
+
+/**
+ * Default button type across the page
+ */
+.btn {
+    @extend %btn;
+    @extend %effect-trans;
+    @include font-size(16px);
+
+    margin: 1em auto .7em auto;
+    padding: 0 2em;
+    color: $brand-text;
+    font-style: italic;
+    line-height: 2.5;
+
+    &:hover {
+        background-color: $brand-beta;
+    }
+}
+
+/**
+ * Button buy tickets with background
+ */
+.btn--contrast {
+    @extend .btn;
+
+    margin: 0;
+    color: $brand-gamma;
+    background-color: $brand-link;
+
+    &:hover {
+        background-color: $brand-beta;
+    }
+}

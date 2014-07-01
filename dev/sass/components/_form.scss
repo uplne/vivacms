@@ -25,7 +25,11 @@
     @extend .input;
 }
 
+/**
+ * Extending ^components/buttons
+ */
 .form__submit {
+    @extend .btn--contrast;
 
     vertical-align: bottom;
     border: none;
