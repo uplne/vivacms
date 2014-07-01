@@ -1,26 +1,32 @@
 'use strict';
 
 require.config({
-    "baseUrl": "/static/js",
+    "baseUrl": "/public/js",
     "paths": {
-        jquery: '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min'
-        //jquery: 'lib/jquery/jquery'
-    }
+        angular: 'lib/angular/angular.min'
+        //jquery: '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min'
+        jquery: 'lib/jquery/jquery'
+    },
+    "shim": {
+        'angular': {
+            'exports': 'angular'
+        },
+        'jquery': {
+            'exports': 'jquery'
+        }
+    },
+    "priority": [
+        'angular'
+    ]
 });
 
 require([
+    'angular',
     'jquery',
-    'modules/toggleMenu',
-    'modules/newsletter',
-    'modules/carousel'
-], function ($, ToggleMenu, Newsletter, Carousel) {
+    'app'
+], function (angular, $, App) {
 
-    var toggleMenu = new ToggleMenu();
-        toggleMenu.init();
-
-    var newsletter = new Newsletter();
-        newsletter.init();
-
-    var carousel = new Carousel();
-        carousel.init();
+    angular.element().ready(function() {
+        angular.resumeBoostrap([app['name']]);
+    });
 });
