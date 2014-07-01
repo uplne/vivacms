@@ -7,8 +7,8 @@ function getPaths() {
         'lang'   : '',
         'config' : path.join(appRoot, 'config.js'),
         'server' : path.join(appRoot, 'server'),
-        'images' : path.join(appRoot, 'public/images'),
-        'js'     : path.join(appRoot, 'public/js'),
+        'images' : 'public/images',
+        'js'     : 'public/js',
         'css'    : 'public/css'
     };
 }
