@@ -1,9 +1,8 @@
 'use strict';
 
 require.config({
-    "baseUrl": "/public/js",
     "paths": {
-        angular: 'lib/angular/angular.min'
+        angular: 'lib/angular/angular',
         //jquery: '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min'
         jquery: 'lib/jquery/jquery'
     },
@@ -14,19 +13,14 @@ require.config({
         'jquery': {
             'exports': 'jquery'
         }
-    },
-    "priority": [
-        'angular'
-    ]
+    }
 });
 
 require([
     'angular',
-    'jquery',
-    'app'
-], function (angular, $, App) {
-
-    angular.element().ready(function() {
-        angular.resumeBoostrap([app['name']]);
-    });
+    'app',
+    'controllers/loginform',
+    'controllers/menucontroller'
+], function (ng) {
+    ng.bootstrap(document, ['app']);
 });

@@ -1,0 +1,24 @@
+.menu {
+    width: 15em;
+    height: 100%;
+    float: left;
+    background-color: $brand-beta;
+}
+
+.menu__link {
+    @include font-size(16px);
+    @extend %effect-trans;
+
+    display: block;
+    color: $brand;
+    text-align: right;
+    line-height: 2.5;
+    padding-right: em(10);
+    border-bottom: 1px solid $brand-btn-hover;
+
+    &:hover,
+    &.is-active {
+        background-color: $brand-link;
+        text-decoration: none;
+    }
+}

@@ -10,3 +10,9 @@
 .top__logo {
     @extend %inline-block;
 }
+
+.top__logoauthor {
+    @extend %inline-block;
+
+    float: right;
+}

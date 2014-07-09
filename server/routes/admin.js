@@ -6,18 +6,17 @@ var config    = require('../config'),
     login     = require('../controllers/login-controller'),
     appRoot   = config.paths.appRoot,
     path      = require('path'),
-    express   = require('express'),
     redirects = require('../controllers/redirects'),
     admin     = require('../controllers/admin-controller');
 
 module.exports = function(app) {
 
-    app.get('/', function(res, req, next) {
-        res.render('content/index', {
-            cssAssets: config.paths.css
-        });
-    });
+    app.get('/', admin.homepage);
 
     // Login page
-    app.get('/login', admin.login);
+    app.get('/login', admin.loginLanding);
+    app.post('/login', admin.loginHandler);
+
+    // Dashboard
+    app.get('/dashboard', admin.dashboard);
 };

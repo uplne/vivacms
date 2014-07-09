@@ -543,7 +543,6 @@ html input[disabled] {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/generic\/_normalize\.scss}line{font-family:\00003337}}
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -560,6 +559,7 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -613,7 +613,6 @@ table {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/generic\/_base\.scss}line{font-family:\000035}}
 * {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -674,30 +673,21 @@ iframe[name='google_conversion_frame'] {
  * TRANSITIONS
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/generic\/_effects\.scss}line{font-family:\0000312}}
-.btn, .btn--contrast, .form__submit {
-  -webkit-transition-property: top, right, left, bottom, margin, background;
+.btn, .btn--contrast, .form__submit, .menu__link {
   transition-property: top, right, left, bottom, margin, background;
-  -webkit-transition-duration: .25s;
   transition-duration: .25s;
-  -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/generic\/_effects\.scss}line{font-family:\0000331}}
 .box__m {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: 0.25s ease-out;
   transition: 0.25s ease-out;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/generic\/_effects\.scss}line{font-family:\0000336}}
 .box__m:hover {
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
   transform: scale(1.5);
-  -webkit-transition: 10s ease-out;
   transition: 10s ease-out;
 }
 
@@ -732,7 +722,7 @@ h2, .beta {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/generic\/_helpers\.scss}line{font-family:\0000318}}
-.box, .mediaisland--small, .top__logo, .form__row {
+.box, .mediaisland--small, .top__logo, .top__logoauthor, .form__row {
   display: inline-block;
   vertical-align: top;
 }
@@ -981,6 +971,7 @@ h2, .beta {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/objects\/_grid\.scss}line{font-family:\0000312}}
 .g__item, .g__item--full {
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -1103,6 +1094,11 @@ h2, .beta {
   left: 0;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_top\.scss}line{font-family:\0000314}}
+.top__logoauthor {
+  float: right;
+}
+
 /**
  * Form
  */
@@ -1110,10 +1106,11 @@ h2, .beta {
 .form {
   width: 42.85714em;
   text-align: center;
-  margin: 45% auto 0 auto;
+  margin: 0 auto;
+  padding-top: 10%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_form\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_form\.scss}line{font-family:\0000315}}
 .input, .input--text {
   font-size: 16px;
   font-size: 1.14286rem;
@@ -1128,7 +1125,7 @@ h2, .beta {
 /**
  * Extending ^components/buttons
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_form\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_form\.scss}line{font-family:\0000332}}
 .form__submit {
   vertical-align: bottom;
   border: none;
@@ -1170,6 +1167,32 @@ h2, .beta {
   background-color: black;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_menu\.scss}line{font-family:\000031}}
+.menu {
+  width: 15em;
+  height: 100%;
+  float: left;
+  background-color: black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_menu\.scss}line{font-family:\000038}}
+.menu__link {
+  font-size: 16px;
+  font-size: 1.14286rem;
+  line-height: 1.5;
+  display: block;
+  color: white;
+  text-align: right;
+  line-height: 2.5;
+  padding-right: 0.71429em;
+  border-bottom: 1px solid #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/stefanvadocz\/Desktop\/Work\/vivacms\/dev\/sass\/components\/_menu\.scss}line{font-family:\0000319}}
+.menu__link:hover, .menu__link.is-active {
+  background-color: #ed1c24;
+  text-decoration: none;
+}
+
 /**
  * Pages
  */
@@ -1177,7 +1200,8 @@ h2, .beta {
 .main {
   width: 100%;
   height: 100%;
-  margin-top: 5em;
+  padding-top: 5em;
+  margin-bottom: -5em;
 }
 
 /*# sourceMappingURL=main.css.map */

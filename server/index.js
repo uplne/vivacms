@@ -3,7 +3,6 @@ var express        = require('express'),
     methodOverride = require('method-override'),
     favicon        = require('static-favicon'),
     errorHandler   = require('errorhandler'),
-    exphbs         = require('express-hbs'),
     path           = require('path'),
     config         = require('./config'),
     routes         = require('./routes'),
@@ -32,20 +31,11 @@ function setupServer() {
     app.use('/public/images', express.static(config.paths.images));
     app.use('/public/js', express.static(config.paths.js));
     app.use('/public/css', express.static(config.paths.css));
+    app.use('/public/tmpl', express.static(config.paths.tmpl));
     app.use(errorHandler({
         dumpExceptions: true,
         showStack: true
     }));
-
-    // Template engine
-    app.engine('hbs', exphbs.express3({
-        partialsDir: appRoot + '/server/views/partials',
-        defaultLayout: appRoot + '/server/views/layouts/default.hbs'
-    }));
-    app.set('view engine', 'hbs');
-    app.set('views', appRoot + '/server/views');
-
-    helpers.registerHelpers();
 
     // Start server
     app.listen(config.server.port, function() {
