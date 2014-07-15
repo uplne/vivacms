@@ -20,7 +20,11 @@ require([
     'angular',
     'app',
     'controllers/loginform',
-    'controllers/menucontroller'
+    'controllers/menucontroller',
+    'controllers/programcontroller',
+    'models/sharedModel',
+    'controllers/baseController',
+    'controllers/derivedController'
 ], function (ng) {
     ng.bootstrap(document, ['app']);
 });

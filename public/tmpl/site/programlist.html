@@ -1,0 +1,11 @@
+<div class="thumbnaillist">
+    <ul class="thumbnaillist__list">
+        <li class="thumbnaillist__item" ng-repeat="item in programData">
+            <a href="/program/{{path}}" class="thumbnaillist__link">
+                <img src="/public/images/program/{{item.img}}" width="190" height="190" alt="" />
+                <i class="programlist__date">{{item.datenum}} <span>June</span></i>
+                <p class="thumbnaillist__title">{{item.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

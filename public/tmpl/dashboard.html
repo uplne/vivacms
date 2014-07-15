@@ -24,9 +24,16 @@
         </section>
         <div class="main">
             <section class="menu" ng-controller="MenuController">
-                <a class="menu__link" ng-class="{selected: location.path() == '/program'}" href="/program" ng-click="clickHandler()">Program</a>{{location.paht()}}
-                <a class="menu__link" href="/program" ng-click="clickHandler">Festival</a>
-                <a class="menu__link" href="/program" ng-click="clickHandler">Press</a>
+                <a class="menu__link" ng-class="{'is-active': location.path() == '/program'}" href="#/program" ng-click="clickHandler()">Program</a>
+                <a class="menu__link" ng-class="{'is-active': location.path() == '/festival'}" href="#/festival" ng-click="clickHandler($event)">Festival</a>
+            </section>
+            <section class="content" ng-controller="BaseController">
+                <p>Base Controller Value: {{model.value}}</p>
+                <button ng-click="updateValue('Value updated from Base')">Update In Base</button>
+                <div ng-controller="DerivedController">
+                    <p>Derived Controller Value: {{model.value}}</p>
+                    <button ng-click="updateValue('Value updated from Derived')">Update In Derived</button>
+                </div>
             </section>
         </div>
 

@@ -17,7 +17,7 @@ define(['app', 'jquery'], function (app, $) {
             });
 
 
-            $scope.clickHandler = function() {
+            $scope.clickHandler = function($event) {
                 console.log('click');
             }
         }
